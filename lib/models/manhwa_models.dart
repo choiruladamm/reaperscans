@@ -34,8 +34,8 @@ final List<Map<String, dynamic>> latestUpdateManhwa = [
         "type": "Manhwa",
         "release": "2018",
         "status": "OnGoing",
-        "chapter": "Chapter 1 - Kiss?",
-        "imgchapter": "https://media.reaperscans.com/file/4SRBHm/comics/7337cadb-b65a-4210-94cb-0b7ccef75d3c/18030df1-07f1-419c-8edb-bc8872fce410/1tknRzfRFFfwFCsyuJmCyTx9YYyWzIW6EnJrfvdi.jpg"
+        "chapter": "Chapter 1",
+        "imgchapter": "https://wuz.reaperscans.id/wp-content/uploads/2022/04/20050017/01-5.jpg"
     },
     {
         "id": 3,
@@ -52,8 +52,8 @@ final List<Map<String, dynamic>> latestUpdateManhwa = [
         "type": "Manhwa",
         "release": "2021",
         "status": "OnGoing",
-        "chapter": "Chapter 1 - Kiss?",
-        "imgchapter": "https://media.reaperscans.com/file/4SRBHm/comics/7337cadb-b65a-4210-94cb-0b7ccef75d3c/18030df1-07f1-419c-8edb-bc8872fce410/1tknRzfRFFfwFCsyuJmCyTx9YYyWzIW6EnJrfvdi.jpg"
+        "chapter": "Chapter 1",
+        "imgchapter": "https://wuz.reaperscans.id/wp-content/uploads/2022/11/13102540/KTH-114-1.jpg"
     },
     {
         "id": 4,
@@ -70,8 +70,8 @@ final List<Map<String, dynamic>> latestUpdateManhwa = [
         "type": "Manhwa",
         "release": "2022",
         "status": "OnGoing",
-        "chapter": "Chapter 1 - Kiss?",
-        "imgchapter": "https://media.reaperscans.com/file/4SRBHm/comics/7337cadb-b65a-4210-94cb-0b7ccef75d3c/18030df1-07f1-419c-8edb-bc8872fce410/1tknRzfRFFfwFCsyuJmCyTx9YYyWzIW6EnJrfvdi.jpg"
+        "chapter": "Chapter 1",
+        "imgchapter": "https://wuz.reaperscans.id/wp-content/uploads/2022/08/20044523/VTK-64.jpg"
     },
     {
         "id": 5,
@@ -88,8 +88,8 @@ final List<Map<String, dynamic>> latestUpdateManhwa = [
         "type": "Manhwa",
         "release": "2022",
         "status": "OnGoing",
-        "chapter": "Chapter 1 - Kiss?",
-        "imgchapter": "https://media.reaperscans.com/file/4SRBHm/comics/7337cadb-b65a-4210-94cb-0b7ccef75d3c/18030df1-07f1-419c-8edb-bc8872fce410/1tknRzfRFFfwFCsyuJmCyTx9YYyWzIW6EnJrfvdi.jpg"
+        "chapter": "Chapter 1",
+        "imgchapter": "https://wuz.reaperscans.id/wp-content/uploads/2022/07/20053206/0.webp"
     },
     {
         "id": 6,
@@ -106,8 +106,8 @@ final List<Map<String, dynamic>> latestUpdateManhwa = [
         "type": "Manhwa",
         "release": "2022",
         "status": "OnGoing",
-        "chapter": "Chapter 1 - Kiss?",
-        "imgchapter": "https://media.reaperscans.com/file/4SRBHm/comics/7337cadb-b65a-4210-94cb-0b7ccef75d3c/18030df1-07f1-419c-8edb-bc8872fce410/1tknRzfRFFfwFCsyuJmCyTx9YYyWzIW6EnJrfvdi.jpg"
+        "chapter": "Chapter 1",
+        "imgchapter": "https://wuz.reaperscans.id/wp-content/uploads/2022/06/20050736/028.jpg"
     },
     {
         "id": 7,
@@ -124,8 +124,8 @@ final List<Map<String, dynamic>> latestUpdateManhwa = [
         "type": "Manhwa",
         "release": "2020",
         "status": "OnGoing",
-        "chapter": "Chapter 1 - Kiss?",
-        "imgchapter": "https://media.reaperscans.com/file/4SRBHm/comics/7337cadb-b65a-4210-94cb-0b7ccef75d3c/18030df1-07f1-419c-8edb-bc8872fce410/1tknRzfRFFfwFCsyuJmCyTx9YYyWzIW6EnJrfvdi.jpg"
+        "chapter": "Chapter 1",
+        "imgchapter": "https://wuz.reaperscans.id/wp-content/uploads/2022/03/20062830/99.png"
     },
     {
         "id": 8,
@@ -142,8 +142,8 @@ final List<Map<String, dynamic>> latestUpdateManhwa = [
         "type": "Manhwa",
         "release": "2022",
         "status": "OnGoing",
-        "chapter": "Chapter 1 - Kiss?",
-        "imgchapter": "https://media.reaperscans.com/file/4SRBHm/comics/7337cadb-b65a-4210-94cb-0b7ccef75d3c/18030df1-07f1-419c-8edb-bc8872fce410/1tknRzfRFFfwFCsyuJmCyTx9YYyWzIW6EnJrfvdi.jpg"
+        "chapter": "Chapter 1",
+        "imgchapter": ""
     },
     {
         "id": 9,
@@ -160,8 +160,8 @@ final List<Map<String, dynamic>> latestUpdateManhwa = [
         "type": "Manhwa",
         "release": "2022",
         "status": "OnGoing",
-        "chapter": "Chapter 1 - Kiss?",
-        "imgchapter": "https://media.reaperscans.com/file/4SRBHm/comics/7337cadb-b65a-4210-94cb-0b7ccef75d3c/18030df1-07f1-419c-8edb-bc8872fce410/1tknRzfRFFfwFCsyuJmCyTx9YYyWzIW6EnJrfvdi.jpg"
+        "chapter": "Chapter 1",
+        "imgchapter": "https://wuz.reaperscans.id/wp-content/uploads/2022/11/01000930/MASG-1.jpg"
     },
     {
         "id": 10,
@@ -178,8 +178,8 @@ final List<Map<String, dynamic>> latestUpdateManhwa = [
         "type": "Manhwa",
         "release": "2021",
         "status": "OnGoing",
-        "chapter": "Chapter 1 - Kiss?",
-        "imgchapter": "https://media.reaperscans.com/file/4SRBHm/comics/7337cadb-b65a-4210-94cb-0b7ccef75d3c/18030df1-07f1-419c-8edb-bc8872fce410/1tknRzfRFFfwFCsyuJmCyTx9YYyWzIW6EnJrfvdi.jpg"
+        "chapter": "Chapter 1",
+        "imgchapter": ""
     },
     {
         "id": 11,
@@ -196,8 +196,8 @@ final List<Map<String, dynamic>> latestUpdateManhwa = [
         "type": "Manhwa",
         "release": "2018",
         "status": "OnGoing",
-        "chapter": "Chapter 1 - Kiss?",
-        "imgchapter": "https://media.reaperscans.com/file/4SRBHm/comics/7337cadb-b65a-4210-94cb-0b7ccef75d3c/18030df1-07f1-419c-8edb-bc8872fce410/1tknRzfRFFfwFCsyuJmCyTx9YYyWzIW6EnJrfvdi.jpg"
+        "chapter": "Chapter 1",
+        "imgchapter": ""
     },
 ];
 
