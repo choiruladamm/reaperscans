@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:reaperscans/colors.dart';
 import 'package:reaperscans/models/manhwa_models.dart';
 import 'package:reaperscans/views/read_manhwa_screen.dart';
 
@@ -83,6 +84,7 @@ class _LatestUpdateScrenState extends State<LatestUpdateScren> {
                 widget.detailLatestUpdate['judul'],
                 textAlign: TextAlign.center,
                 style: TextStyle(
+                  fontWeight: FontWeight.w600,
                   fontSize: 22.0,
                   color: Colors.white,
                 ),
@@ -121,17 +123,158 @@ class _LatestUpdateScrenState extends State<LatestUpdateScren> {
               ),
             ),
 
+            // sysnopsis
             Padding(
-              padding: EdgeInsets.all(20.0),
-              child: Text(
-                widget.detailLatestUpdate['synopsis'],
-                style: TextStyle(
-                  fontSize: 14.0,
-                  color: Colors.grey,
+              padding: EdgeInsets.only(left: 20, right: 20, top: 20),
+              child: Container(
+                height: 300.0,
+                decoration: BoxDecoration(
+                  color: bgColors,
+                  borderRadius: const BorderRadius.all(
+                    Radius.circular(
+                      16.0,
+                    ),
+                  ),
+                ),
+                child: Padding(
+                  padding: EdgeInsets.all(20.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Synopsis",
+                        style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          fontSize: 18.0,
+                          color: Colors.white,
+                        ),
+                      ),
+                      SizedBox(height: 10),
+                      Text(
+                        widget.detailLatestUpdate['synopsis'],
+                        maxLines: 9,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                          fontSize: 13.0,
+                          color: Colors.grey.shade300,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
 
+            // detail info
+            Padding(
+              padding: EdgeInsets.only(left: 20, right: 20, top: 20),
+              child: Container(
+                width: double.infinity,
+                height: 320.0,
+                decoration: BoxDecoration(
+                  color: bgColors,
+                  borderRadius: const BorderRadius.all(
+                    Radius.circular(
+                      16.0,
+                    ),
+                  ),
+                ),
+                child: Padding(
+                  padding: EdgeInsets.all(20.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Complete Info",
+                        style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          fontSize: 18.0,
+                          color: Colors.white,
+                        ),
+                      ),
+                      SizedBox(height: 10),
+                      Text(
+                        "Rating",
+                        maxLines: 9,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                          fontSize: 13.0,
+                          color: Colors.grey,
+                        ),
+                      ),
+                      Text(
+                        widget.detailLatestUpdate['ratingaverage'],
+                        maxLines: 9,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                          fontSize: 14.0,
+                          color: Colors.grey.shade300,
+                        ),
+                      ),
+                      SizedBox(height: 10),
+                      Text(
+                        "Rank",
+                        maxLines: 9,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                          fontSize: 13.0,
+                          color: Colors.grey,
+                        ),
+                      ),
+                      Text(
+                        widget.detailLatestUpdate['rank'],
+                        maxLines: 9,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                          fontSize: 14.0,
+                          color: Colors.grey.shade300,
+                        ),
+                      ),
+                      SizedBox(height: 10),
+                      Text(
+                        "Author",
+                        maxLines: 9,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                          fontSize: 13.0,
+                          color: Colors.grey,
+                        ),
+                      ),
+                      Text(
+                        widget.detailLatestUpdate['author'],
+                        maxLines: 9,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                          fontSize: 14.0,
+                          color: Colors.grey.shade300,
+                        ),
+                      ),
+                      SizedBox(height: 10),
+                      Text(
+                        "Status",
+                        maxLines: 9,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                          fontSize: 13.0,
+                          color: Colors.grey,
+                        ),
+                      ),
+                      Text(
+                        widget.detailLatestUpdate['status'],
+                        maxLines: 9,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                          fontSize: 14.0,
+                          color: Colors.grey.shade300,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+
+            // text latest release
             Padding(
               padding: EdgeInsets.only(top: 20, left: 20, right: 20),
               child: Row(
@@ -149,6 +292,7 @@ class _LatestUpdateScrenState extends State<LatestUpdateScren> {
               ),
             ),
 
+            // nav read manhwa
             Padding(
               padding:
                   EdgeInsets.only(left: 20, right: 20, top: 15, bottom: 20),
@@ -156,7 +300,10 @@ class _LatestUpdateScrenState extends State<LatestUpdateScren> {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => ReadManhwaScreen(detailReadManhwa: widget.detailLatestUpdate)),
+                    MaterialPageRoute(
+                      builder: (context) => ReadManhwaScreen(
+                          detailReadManhwa: widget.detailLatestUpdate),
+                    ),
                   );
                 },
                 child: Container(
