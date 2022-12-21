@@ -32,6 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+
             // custom app bar
             Padding(
               padding: EdgeInsets.only(top: 40, right: 2, left: 20),
@@ -95,7 +96,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
 
-            // heading slider
+            // heading slider content
             Padding(
               padding: EdgeInsets.only(left: 20, top: 20),
               child: SizedBox(
@@ -361,36 +362,6 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
 
-            // Padding(
-            //   padding: EdgeInsets.symmetric(horizontal: 20, vertical: 30),
-            //   child: GridView.builder(
-            //     gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            //       crossAxisCount: 2,
-            //       mainAxisSpacing: 12,
-            //       crossAxisSpacing: 12,
-            //       mainAxisExtent: 280,
-            //     ),
-            //     itemCount: listAllManhwa.length,
-            //     shrinkWrap: true,
-            //     physics: const ScrollPhysics(),
-            //     itemBuilder: (BuildContext context, int index) {
-            //       return Container(
-            //         decoration: BoxDecoration(
-            //           image: DecorationImage(
-            //             image: NetworkImage(
-            //               "${listAllManhwa.elementAt(index)['poster']}",
-            //             ),
-            //             fit: BoxFit.cover,
-            //           ),
-            //           borderRadius: const BorderRadius.all(
-            //             Radius.circular(16.0),
-            //           ),
-            //           color: Colors.grey[900],
-            //         ),
-            //       );
-            //     },
-            //   ),
-            // ),
           ],
         ),
       ),

@@ -23,6 +23,7 @@ class _LatestUpdateScrenState extends State<LatestUpdateScren> {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            
             // custom app bar
             Padding(
               padding: const EdgeInsets.only(top: 40, left: 20, right: 20),
@@ -370,6 +371,7 @@ class _LatestUpdateScrenState extends State<LatestUpdateScren> {
                 ),
               ),
             ),
+          
           ],
         ),
       ),

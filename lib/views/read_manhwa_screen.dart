@@ -20,11 +20,14 @@ class _ReadManhwaScreenState extends State<ReadManhwaScreen> {
           children: [
             Stack(
               children: [
+                // menampilkan image content
                 Center(
                   child: Image.network(
                     widget.detailReadManhwa['content'],
                   ),
                 ),
+
+                // tombol kembali
                 Padding(
                   padding: const EdgeInsets.only(top: 40, left: 20, right: 20),
                   child: Row(
@@ -48,7 +51,6 @@ class _ReadManhwaScreenState extends State<ReadManhwaScreen> {
                     ],
                   ),
                 ),
-                
               ],
             )
           ],

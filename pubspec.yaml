@@ -38,7 +38,6 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter_rating_bar: ^4.0.1
   unicons: ^2.1.0
-  flutter_login: ^4.1.1
   firebase_core: ^2.4.0
   firebase_auth: ^4.2.1
 

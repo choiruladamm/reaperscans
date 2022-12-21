@@ -1,80 +1,4 @@
-// ignore_for_file: prefer_const_constructors
-
-// import 'package:flutter/material.dart';
-// import 'package:flutter_login/flutter_login.dart';
-// import 'package:reaperscans/views/home_screen.dart';
-
-// const users = {
-//   'adam@gmail.com': 'adam',
-// };
-
-// class LoginScreen extends StatelessWidget {
-
-//   Duration get loginTime => Duration(milliseconds: 1250);
-
-//   Future<String?> _authUser(LoginData data) {
-//     debugPrint('Name: ${data.name}, Password: ${data.password}');
-//     return Future.delayed(loginTime).then((_) {
-//       if (!users.containsKey(data.name)) {
-//         return 'User tidak ada';
-//       }
-//       if (users[data.name] != data.password) {
-//         return 'Password salah';
-//       }
-//       return null;
-//     });
-//   }
-
-//   Future<String?> _signupUser(SignupData data) {
-//     debugPrint('Signup Name: ${data.name}, Password: ${data.password}');
-//     return Future.delayed(loginTime).then((_) {
-//       return null;
-//     });
-//   }
-
-//   Future<String> _recoverPassword(String name) {
-//     debugPrint('Name: $name');
-//     return Future.delayed(loginTime).then((_) {
-//       if (!users.containsKey(name)) {
-//         return 'Masukkan email dan pasword dengan benar';
-//       }
-//       return 'null';
-//     });
-//   }
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return FlutterLogin(
-//       title: 'Comics',
-//       onLogin: _authUser,
-//       onSignup: _signupUser,
-//       onSubmitAnimationCompleted: () {
-//         Navigator.of(context).pushReplacement(MaterialPageRoute(
-//           builder: (context) => HomeScreen(),
-//         ));
-//       },
-//       onRecoverPassword: _recoverPassword,
-//       theme: LoginTheme(
-//         primaryColor: Colors.black,
-
-//         cardTheme: CardTheme(
-//           color: Colors.red,
-//           elevation: 5,
-//           margin: EdgeInsets.only(top: 15),
-
-//         ),
-//         inputTheme: InputDecorationTheme(
-//           filled: true,
-//           fillColor: Colors.white,
-//           contentPadding: EdgeInsets.zero,
-//           enabledBorder: UnderlineInputBorder(
-//             borderSide: BorderSide.none,
-//           ),
-//         ),
-//       ),
-//     );
-//   }
-// }
+// ignore_for_file: prefer_const_constructors, use_build_context_synchronously, avoid_print
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -93,10 +17,35 @@ class _LoginScreenState extends State<LoginScreen> {
 
   // login method
   void loginEmail() async {
-    await FirebaseAuth.instance.signInWithEmailAndPassword(
-      email: emailController.text,
-      password: passwordController.text,
+    // menampilkan loading
+    showDialog(
+      context: context,
+      builder: (context) {
+        return Center(
+          child: CircularProgressIndicator(
+            color: Colors.red,
+          ),
+        );
+      },
     );
+
+    // try login email & password
+    try {
+      await FirebaseAuth.instance.signInWithEmailAndPassword(
+        email: emailController.text,
+        password: passwordController.text,
+      );
+      Navigator.pop(context);
+    } on FirebaseAuthException catch (e) {
+      if (e.code == 'user-not-found') {
+        print('salah email');
+      } else if (e.code == 'wrong-password') {
+        print('salah password');
+      }
+    }
+
+    // pop loading
+    Navigator.pop(context);
   }
 
   @override
