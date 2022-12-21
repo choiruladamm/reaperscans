@@ -26,7 +26,7 @@ class _ReadManhwaScreenState extends State<ReadManhwaScreen> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
+                  padding: const EdgeInsets.only(top: 40, left: 20, right: 20),
                   child: Row(
                     children: [
                       GestureDetector(

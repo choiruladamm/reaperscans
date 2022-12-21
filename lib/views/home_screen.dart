@@ -1,5 +1,6 @@
 // ignore_for_file: camel_case_types, prefer_typing_uninitialized_variables, prefer_const_constructors
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:reaperscans/models/manhwa_models.dart';
@@ -14,22 +15,31 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  // show user yang sedang login
+  final user = FirebaseAuth.instance.currentUser;
+
+  // logout user
+  void logout() async {
+    FirebaseAuth.instance.signOut();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
+      extendBodyBehindAppBar: true,
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // custom app bar
             Padding(
-              padding: EdgeInsets.only(top: 20, right: 20, left: 20),
+              padding: EdgeInsets.only(top: 40, right: 2, left: 20),
               child: Row(
                 children: [
                   CircleAvatar(
                     backgroundImage: NetworkImage(
-                      "https://i.ibb.co/PGv8ZzG/me.jpg",
+                      "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
                     ),
                     backgroundColor: Colors.grey[900],
                     radius: 25,
@@ -37,9 +47,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   Padding(
                     padding: EdgeInsets.only(left: 20),
                     child: Text(
-                      "Axell James",
+                      user!.email!,
                       style: TextStyle(
-                        fontSize: 16.0,
+                        fontSize: 13.0,
                         color: Colors.white,
                       ),
                     ),
@@ -48,6 +58,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   Icon(
                     UniconsLine.search,
                     size: 28.0,
+                    color: Colors.white,
+                  ),
+                  IconButton(
+                    onPressed: logout,
+                    icon: Icon(Icons.logout),
                     color: Colors.white,
                   ),
                 ],
@@ -100,9 +115,11 @@ class _HomeScreenState extends State<HomeScreen> {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => LatestUpdateScren(
-                                        detailLatestUpdate:
-                                            latestUpdateManhwa[index])),
+                                  builder: (context) => LatestUpdateScren(
+                                    detailLatestUpdate:
+                                        latestUpdateManhwa[index],
+                                  ),
+                                ),
                               );
                             },
                             child: Container(
