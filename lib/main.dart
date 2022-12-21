@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:reaperscans/views/home_screen.dart';
+import 'package:reaperscans/views/login_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: 'Poppins'),
-      home: HomeScreen(),
+      home: LoginScreen(),
     );
   }
 }
